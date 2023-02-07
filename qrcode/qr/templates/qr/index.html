@@ -4,10 +4,47 @@
         <title>
             Qr code
         </title>
+
+        <style>
+            body{
+                background-color: hsl(212, 45%, 89%);
+                margin: 30%;
+            }
+            div#card{
+               background-color: hsl(0, 0%, 100%);
+               border-radius: 20px;
+               box-shadow: 5px 5px 5px  rgb(185, 184, 184);
+               margin: 35px;
+               margin-top: 40px;
+               padding: 5px 5px;
+               font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h3{
+                font-weight: bolder;
+                text-align: center;
+                font-style: normal;
+                margin: 10px;
+                color: hsl(218, 44%, 22%);
+                
+            }
+            p{
+                text-align: center;
+                color: hsl(220, 15%, 55%);
+                margin: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h1> 
-            Hello am Amanda
-        </h1>
+        <div id="card">
+            <div id="img">
+                {% load static %}
+                <img src="{% static 'qr\static\media\images\qrcode.png' %}" alt="www.frontendmentor.com"/>
+            </div>
+            <h3>Improve your Frontend <br>skills by building projects</h3>
+            <p>
+                Scann the QR code to visit the Frontend <br> Mentor and take your coding skills to <br>the next level
+            </p>
+        </div>
     </body>
 </html>
