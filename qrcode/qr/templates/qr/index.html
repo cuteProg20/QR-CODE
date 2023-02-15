@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>
             Qr code
         </title>
-
+        <link rel="icon"href="{% static 'qr/images/favicon-32x32.png' %}">
         <style>
             body{
                 background-color: hsl(212, 45%, 89%);
@@ -18,6 +19,8 @@
                margin-top: 40px;
                padding: 5px 5px;
                font-family: Arial, Helvetica, sans-serif;
+               margin: 0px auto;
+               display: inline-block
             }
 
             h3{
@@ -33,14 +36,13 @@
                 color: hsl(220, 15%, 55%);
                 margin: 10px;
             }
+            /* #img{
+            } */
         </style>
     </head>
     <body>
         <div id="card">
-            <div id="img">
-                {% load static %}
-                <img src="{% static 'qr\static\media\images\qrcode.png' %}" alt="www.frontendmentor.com"/>
-            </div>
+                <img src="{% static 'qr/images/qrcode.png' %}" id="img" alt="www.frontendmentor.com">
             <h3>Improve your Frontend <br>skills by building projects</h3>
             <p>
                 Scann the QR code to visit the Frontend <br> Mentor and take your coding skills to <br>the next level
